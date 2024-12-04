@@ -56,6 +56,18 @@ a {
 	}
 }
 
+.navbar-nav .nav-link {
+	font-size: 1rem;
+	font-weight: 500;
+	color: $text-color;
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: $primary-color;
+		transform: translateY(-2px);
+	}
+}
+
 .btn-primary {
 	font-size: 1rem;
 	font-weight: 600;
