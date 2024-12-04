@@ -28,7 +28,9 @@
 	</head>
 	<body>
 		<!-- Navbar -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top"
+		>
 			<div class="container">
 				<a class="navbar-brand fw-bold text-primary" href="#">
 					<i class="bi bi-briefcase-fill"></i> Seaman Jobsite
@@ -94,6 +96,29 @@
 				<a href="register.html" class="btn btn-primary btn-lg px-5 py-3">
 					<i class="bi bi-person-plus"></i> Get Started
 				</a>
+			</div>
+		</section>
+
+		<!-- Search Section -->
+		<section class="search-section py-5">
+			<div class="container text-center">
+				<h2 class="fw-bold mb-3">
+					<i class="bi bi-search"></i> Find Your Next Job
+				</h2>
+				<p class="text-muted mb-4">
+					Search thousands of job listings by title, keyword, or location.
+				</p>
+				<form class="d-flex justify-content-center">
+					<input
+						type="text"
+						class="form-control form-control-lg me-2"
+						placeholder="Enter job title or keyword"
+						style="max-width: 400px"
+					/>
+					<button class="btn btn-primary btn-lg px-4" type="submit">
+						Search
+					</button>
+				</form>
 			</div>
 		</section>
 
