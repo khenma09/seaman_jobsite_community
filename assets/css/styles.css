@@ -65,44 +65,59 @@ a:hover {
   transform: scale(1.05);
 }
 
+/* Login Page Interactivity */
+.login-card {
+  background-color: #fff;
+  border: 1px solid #999999;
+  transition: all 0.3s ease;
+}
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+.login-card i {
+  margin-bottom: 1rem;
+  color: #0056b3;
+}
+.login-card h2 {
+  font-size: 2rem;
+  color: #0056b3;
+}
+.login-card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+.login-card p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+.login-card .btn {
+  font-size: 1rem;
+  border-radius: 25px;
+}
+.login-card .btn:hover {
+  background-color: #003f8c;
+}
+
 /* Login Section */
 .login-section {
-  background-color: #f8f9fa;
   padding: 3rem 2rem;
 }
 .login-section h2 {
   font-size: 2rem;
   color: #0056b3;
 }
-.login-section .login-card {
-  background-color: #fff;
-  border: 1px solid #999999;
-  transition: all 0.3s ease;
-}
-.login-section .login-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-.login-section .login-card i {
-  margin-bottom: 1rem;
-  color: #0056b3;
-}
-.login-section .login-card h5 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
-}
-.login-section .login-card p {
-  font-size: 1rem;
+.login-section p {
+  font-size: 1.1rem;
   color: #6c757d;
-  margin-bottom: 1.5rem;
 }
-.login-section .login-card .btn {
-  font-size: 1rem;
-  border-radius: 25px;
-}
-.login-section .login-card .btn:hover {
-  background-color: #003f8c;
+
+/* Input Focus States */
+input:focus {
+  border-color: #0056b3;
+  box-shadow: 0px 0px 6px rgb(0, 36.9944134078, 77);
 }
 
 /* Hero Section */
@@ -354,6 +369,17 @@ footer {
 footer p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+/* Sticky Footer */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flex-grow-1 {
+  flex: 1;
 }
 
 /* Back-to-Top Button */
