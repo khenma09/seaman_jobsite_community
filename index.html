@@ -274,7 +274,7 @@
 		</section>
 
 		<!-- Testimonials Section -->
-		<section class="testimonials-slider py-5 bg-light">
+		<section class="testimonials-slider py-5 position-relative">
 			<div class="container text-center">
 				<h2 class="fw-bold mb-4">What Our Users Say</h2>
 				<div
@@ -284,42 +284,62 @@
 				>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<div class="testimonial-card mx-auto p-4 shadow">
-								<p class="mb-3">
-									"I found my dream job within weeks of joining. Thank you
-									Seafarer Jobsite!"
-								</p>
-								<footer class="blockquote-footer">John D.</footer>
+							<div class="testimonial-card mx-auto p-4 shadow rounded">
+								<div class="avatar mb-3 mx-auto">
+									<img
+										src="assets/img/user1.jpg"
+										alt="User 1"
+										class="rounded-circle"
+									/>
+								</div>
+								<blockquote class="blockquote mb-3">
+									<p class="fst-italic">
+										"I found my dream job within weeks of joining. Thank you,
+										Seaman Jobsite!"
+									</p>
+								</blockquote>
+								<div class="testimonial-author">
+									John D. <cite title="Position">Deck Officer</cite>
+								</div>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="testimonial-card mx-auto p-4 shadow">
-								<p class="mb-3">
-									"Seafarer Jobsite made it so easy to connect with top maritime
-									employers."
-								</p>
-								<footer class="blockquote-footer">Maria S.</footer>
+							<div class="testimonial-card mx-auto p-4 shadow rounded">
+								<div class="avatar mb-3 mx-auto">
+									<img
+										src="assets/img/user2.jpg"
+										alt="User 2"
+										class="rounded-circle"
+									/>
+								</div>
+								<blockquote class="blockquote mb-3">
+									<p class="fst-italic">
+										"Seaman Jobsite made it so easy to connect with top maritime
+										employers."
+									</p>
+								</blockquote>
+								<div class="testimonial-author">
+									Maria S. <cite title="Position">Marine Engineer</cite>
+								</div>
 							</div>
 						</div>
 					</div>
-					<button
-						class="carousel-control-prev"
-						type="button"
-						data-bs-target="#testimonialCarousel"
-						data-bs-slide="prev"
+					<!-- Custom Carousel Indicators -->
+					<div
+						class="carousel-indicators position-absolute bottom-0 start-50 translate-middle-x"
 					>
-						<span class="carousel-control-prev-icon"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button
-						class="carousel-control-next"
-						type="button"
-						data-bs-target="#testimonialCarousel"
-						data-bs-slide="next"
-					>
-						<span class="carousel-control-next-icon"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
+						<button
+							type="button"
+							data-bs-target="#testimonialCarousel"
+							data-bs-slide-to="0"
+							class="active"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#testimonialCarousel"
+							data-bs-slide-to="1"
+						></button>
+					</div>
 				</div>
 			</div>
 		</section>
