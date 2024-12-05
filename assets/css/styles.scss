@@ -493,3 +493,64 @@ footer {
 		font-size: 1.5rem;
 	}
 }
+
+/* Registration Section */
+.register-section {
+	padding: 3rem 2rem;
+	background: linear-gradient(
+		to right,
+		$light-bg,
+		color.adjust($primary-color, $lightness: 90%)
+	);
+
+	h2 {
+		font-size: 2.5rem;
+		color: $primary-color;
+	}
+
+	p {
+		font-size: 1.1rem;
+		color: $muted;
+		margin-bottom: 2rem;
+	}
+
+	.register-card {
+		background: $white;
+		border: 1px solid color.adjust($text-color, $lightness: 40%);
+		box-shadow: 0px 4px 8px $shadow-color;
+		transition: all 0.3s ease;
+		padding: 2rem;
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0px 6px 12px $shadow-color;
+		}
+
+		h5 {
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: $text-color;
+		}
+
+		.form-control {
+			padding: 0.8rem;
+			border-radius: 25px;
+			border: 1px solid color.adjust($text-color, $lightness: 40%);
+			box-shadow: 0px 2px 4px $shadow-color;
+
+			&:focus {
+				border-color: $primary-color;
+				box-shadow: 0px 0px 8px color.adjust($primary-color, $lightness: -20%);
+			}
+		}
+
+		.btn-primary {
+			border-radius: 25px;
+
+			&:hover {
+				background-color: $secondary-color;
+				transform: scale(1.05);
+			}
+		}
+	}
+}
