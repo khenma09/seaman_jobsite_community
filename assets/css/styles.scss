@@ -32,42 +32,111 @@ a {
 .navbar {
 	padding: 1rem 2rem;
 	background-color: $light-bg;
-	box-shadow: 0 2px 4px $shadow-color;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid color.adjust($text-color, $lightness: 80%);
 }
 
 .navbar-brand {
-	font-size: 1.8rem;
-	font-weight: 700;
+	font-size: 1.5rem;
+	font-weight: bold;
 	color: $primary-color;
+	display: flex;
+	align-items: center;
+
+	i {
+		font-size: 1.8rem;
+		margin-right: 0.5rem;
+	}
 
 	&:hover {
 		color: $secondary-color;
+		text-decoration: none;
+	}
+}
+
+.navbar-nav {
+	align-items: center;
+}
+
+.nav-item {
+	margin-right: 1.5rem;
+
+	&:last-child {
+		margin-right: 0;
 	}
 }
 
 .nav-link {
 	font-size: 1rem;
 	font-weight: 500;
-	margin-right: 1rem;
 	color: $text-color;
+	transition: color 0.3s ease;
 
 	&:hover {
 		color: $primary-color;
+		text-decoration: none;
 	}
 }
 
-.navbar-nav .nav-link {
-	font-size: 1rem;
-	font-weight: 500;
-	color: $text-color;
-	transition: all 0.3s ease;
+/* Special Buttons */
+/* Navbar Buttons Alignment */
+.navbar-nav .nav-item .btn {
+	font-size: 0.9rem;
+	font-weight: 600;
+	border-radius: 20px;
+	padding: 0.4rem 1.2rem;
+	margin: 0.2rem 0; // Small margin for better spacing in smaller screens
 
-	&:hover {
+	&.btn-primary {
+		background-color: $primary-color;
+		color: $white;
+
+		&:hover {
+			background-color: $secondary-color;
+		}
+	}
+
+	&.btn-outline-primary {
+		border: 1px solid $primary-color;
 		color: $primary-color;
-		transform: translateY(-2px);
+
+		&:hover {
+			background-color: $primary-color;
+			color: $white;
+		}
 	}
 }
 
+@media (max-width: 768px) {
+	.navbar-nav {
+		flex-direction: column;
+		align-items: center; // Center items for smaller screens
+	}
+
+	.navbar-nav .nav-item .btn {
+		width: 100%; // Make buttons full width on smaller devices
+		text-align: center;
+	}
+}
+
+/* Mobile Toggler */
+.navbar-toggler {
+	border: none;
+	color: $text-color;
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+/* Sticky Navbar */
+.sticky-top {
+	position: sticky;
+	top: 0;
+	z-index: 1030;
+}
+
+/* Buttons Styling */
 .btn-primary {
 	font-size: 1rem;
 	font-weight: 600;
