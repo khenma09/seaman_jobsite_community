@@ -554,3 +554,74 @@ footer {
 		}
 	}
 }
+/* Tabs */
+.nav-tabs .nav-link {
+	border: none;
+	font-weight: 600;
+	color: $text-color;
+	transition: all 0.3s ease;
+
+	&.active {
+		color: $primary-color;
+		border-bottom: 2px solid $primary-color;
+	}
+
+	&:hover {
+		color: $primary-color;
+	}
+}
+
+/* Forgot Password Section */
+.forgot-password-section {
+	padding: 3rem 2rem;
+
+	.forgot-password-card {
+		background: $white;
+		border: 1px solid color.adjust($text-color, $lightness: 40%);
+		box-shadow: 0px 4px 8px $shadow-color;
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 700;
+			color: $primary-color;
+		}
+
+		p {
+			font-size: 1rem;
+			color: $muted;
+			margin-bottom: 1.5rem;
+		}
+
+		input {
+			border: 1px solid color.adjust($text-color, $lightness: 40%);
+			border-radius: 25px;
+			padding: 0.75rem;
+
+			&:focus {
+				border-color: $primary-color;
+				box-shadow: 0px 0px 8px color.adjust($primary-color, $lightness: -20%);
+			}
+		}
+
+		button {
+			font-size: 1rem;
+			font-weight: 600;
+			border-radius: 25px;
+			padding: 0.75rem;
+
+			&:hover {
+				background-color: $secondary-color;
+				transform: scale(1.05);
+			}
+		}
+
+		a {
+			font-size: 0.9rem;
+			color: $primary-color;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
