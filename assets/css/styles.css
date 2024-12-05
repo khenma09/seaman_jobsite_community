@@ -67,59 +67,37 @@ a:hover {
 
 /* Login Section */
 .login-section {
-  padding: 3rem 2rem;
-  background: linear-gradient(to right, #f8f9fa, hsl(211.1731843575, 100%, 120.0980392157%));
-}
-.login-section h2 {
-  font-size: 2.5rem;
-  color: #0056b3;
-  margin-bottom: 1rem;
-}
-.login-section p {
-  font-size: 1.1rem;
-  color: #6c757d;
-  margin-bottom: 2rem;
-}
-.login-section .btn-primary {
-  background-color: #0056b3;
-  border: none;
-  border-radius: 25px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  background-color: #f8f9fa;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
 }
-.login-section .btn-primary:hover {
-  background-color: #003f8c;
-  transform: scale(1.05);
-}
-.login-section .btn-primary i {
-  color: #fff;
-}
-.login-section a.text-primary {
-  text-decoration: none;
-}
-.login-section a.text-primary:hover {
-  text-decoration: underline;
-}
-
-/* Login Card */
-.login-card {
-  background: #fff;
+.login-section .login-card {
+  background-color: #fff;
   border: 1px solid #999999;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  padding: 2rem;
-}
-.login-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
 }
-.login-card h2 {
-  font-size: 2rem;
+.login-section .login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+.login-section .login-card h2 {
+  font-size: 1.8rem;
   color: #0056b3;
+}
+.login-section .login-card p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+.login-section .login-card .btn {
+  border-radius: 25px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+}
+.login-section .login-card .btn:hover {
+  background-color: #003f8c;
 }
 
 /* Input Focus States */
@@ -523,6 +501,13 @@ footer p {
 }
 .forgot-password-section .forgot-password-card a:hover {
   text-decoration: underline;
+}
+
+.forgot-password-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
