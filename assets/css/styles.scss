@@ -263,26 +263,20 @@ input:focus {
 
 /* Call-to-Action Section */
 .cta {
-	background: linear-gradient(to right, $primary-color, $secondary-color);
-	color: $white;
-	padding: 3rem 2rem;
-	text-align: center;
+	.cta-buttons {
+		display: flex;
+		flex-direction: column; // Default for smaller devices
+		gap: 1rem;
 
-	h2 {
-		font-size: 2.5rem;
-		font-weight: 700;
-		margin-bottom: 1rem;
-	}
+		@media (min-width: 768px) {
+			flex-direction: row; // Align horizontally for larger screens
+		}
 
-	p {
-		font-size: 1.2rem;
-		margin-bottom: 2rem;
-	}
-
-	.btn {
-		font-size: 1rem;
-		padding: 0.8rem 2rem;
-		margin: 0.5rem;
+		a {
+			width: 100%; // Full width for smaller screens
+			max-width: 200px; // Adjust as per your design preferences
+			margin: 0 auto; // Center-align buttons
+		}
 	}
 }
 
