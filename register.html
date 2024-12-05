@@ -42,15 +42,56 @@
 			<!-- Registration Section -->
 			<section class="register-section py-5 flex-grow-1">
 				<div class="container">
-					<h2 class="text-center fw-bold mb-4">Register</h2>
+					<h2 class="text-center fw-bold mb-4">Create Your Account</h2>
 					<p class="text-center text-muted mb-5">
-						Choose your registration type below to get started.
+						Choose your registration type below and start your journey.
 					</p>
-					<div class="row g-4">
-						<!-- Seafarer Registration -->
-						<div class="col-md-6">
-							<div class="register-card p-4 shadow-sm text-center rounded">
-								<h5 class="fw-bold mb-4">Seafarer Registration</h5>
+
+					<!-- Tabs for User Type -->
+					<ul
+						class="nav nav-tabs justify-content-center mb-4"
+						id="registrationTabs"
+						role="tablist"
+					>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link active"
+								id="seafarer-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#seafarer-form"
+								type="button"
+								role="tab"
+								aria-controls="seafarer-form"
+								aria-selected="true"
+							>
+								Seafarer
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button
+								class="nav-link"
+								id="employer-tab"
+								data-bs-toggle="tab"
+								data-bs-target="#employer-form"
+								type="button"
+								role="tab"
+								aria-controls="employer-form"
+								aria-selected="false"
+							>
+								Employer/Agency
+							</button>
+						</li>
+					</ul>
+
+					<div class="tab-content" id="registrationTabsContent">
+						<!-- Seafarer Registration Form -->
+						<div
+							class="tab-pane fade show active"
+							id="seafarer-form"
+							role="tabpanel"
+							aria-labelledby="seafarer-tab"
+						>
+							<div class="register-card p-4 shadow-sm rounded">
 								<form>
 									<div class="mb-3">
 										<input
@@ -65,6 +106,14 @@
 											type="email"
 											class="form-control"
 											placeholder="Email Address"
+											required
+										/>
+									</div>
+									<div class="mb-3">
+										<input
+											type="text"
+											class="form-control"
+											placeholder="Current Rank"
 											required
 										/>
 									</div>
@@ -100,19 +149,17 @@
 										Register as Seafarer
 									</button>
 								</form>
-								<div class="text-center mt-3">
-									<p class="text-muted">
-										Already have an account?
-										<a href="login.html" class="text-primary">Login</a>
-									</p>
-								</div>
 							</div>
 						</div>
 
-						<!-- Employer/Agency Registration -->
-						<div class="col-md-6">
-							<div class="register-card p-4 shadow-sm text-center rounded">
-								<h5 class="fw-bold mb-4">Employer/Agency Registration</h5>
+						<!-- Employer/Agency Registration Form -->
+						<div
+							class="tab-pane fade"
+							id="employer-form"
+							role="tabpanel"
+							aria-labelledby="employer-tab"
+						>
+							<div class="register-card p-4 shadow-sm rounded">
 								<form>
 									<div class="mb-3">
 										<input
@@ -170,12 +217,6 @@
 										Register as Employer
 									</button>
 								</form>
-								<div class="text-center mt-3">
-									<p class="text-muted">
-										Already have an account?
-										<a href="login.html" class="text-primary">Login</a>
-									</p>
-								</div>
 							</div>
 						</div>
 					</div>
