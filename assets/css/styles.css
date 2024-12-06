@@ -194,49 +194,46 @@ input:focus {
 
 /* Job Categories */
 .job-categories .category-card {
-  background: #ffffff; /* Ensure a clean, minimal background */
-  border: 1px solid #999999;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  padding: 2rem 1rem; /* Add better spacing */
-  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height: 250px; /* Ensures all cards are the same size */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .job-categories .category-card:hover {
-  transform: scale(1.08); /* A smooth scale effect */
-  background: hsl(211.1731843575, 100%, 125.0980392157%);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Add more depth */
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 .job-categories .category-card .icon-circle {
   width: 80px;
   height: 80px;
-  background: #0056b3; /* Vibrant circle background */
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem; /* Center-align with bottom margin */
-  color: #fff; /* White icon for contrast */
+  align-items: center;
+  background-color: #f8f9fa;
+  margin-bottom: 1rem;
 }
-.job-categories .category-card .icon-circle i {
-  font-size: 2rem;
+.job-categories .category-card i {
+  font-size: 2.5rem;
+  color: #007bff;
 }
 .job-categories .category-card h6 {
-  font-size: 1.3rem; /* Slightly larger for better readability */
+  font-size: 1.2rem;
   font-weight: 600;
   color: #333;
-  margin-top: 0.5rem; /* Add space above the text */
-}
-.job-categories .category-card p {
-  font-size: 0.9rem; /* Optional: Include a brief description */
-  color: #6c757d;
   margin-top: 0.5rem;
 }
 
 /* CTA Action Section */
 h2 {
   font-size: 2.5rem; /* More prominent heading */
-  color: white;
+  color: #0056b3;
   margin-bottom: 1.5rem; /* Add space below the heading */
 }
 
