@@ -233,13 +233,13 @@ input:focus {
   margin-top: 0.5rem;
 }
 
+/* CTA Action Section */
 h2 {
   font-size: 2.5rem; /* More prominent heading */
-  color: #0056b3;
+  color: white;
   margin-bottom: 1.5rem; /* Add space below the heading */
 }
 
-/* Call-to-Action Section */
 .cta .cta-buttons {
   display: flex;
   flex-direction: column;
@@ -377,7 +377,6 @@ h2 {
 /* How It Works */
 .how-it-works {
   /* How It Works Section Enhancements */
-  /* Footer Enhancements */
 }
 .how-it-works h2 {
   font-size: 2rem;
@@ -396,17 +395,6 @@ h2 {
   padding: 15px;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.how-it-works footer ul {
-  padding-left: 0;
-}
-.how-it-works footer a:hover {
-  text-decoration: underline;
-  color: #f8d210;
-}
-.how-it-works .social-icon:hover {
-  transform: scale(1.1);
-  color: #f8d210;
 }
 
 /* Recent Job Openings */
@@ -496,6 +484,34 @@ footer p {
 
 .flex-grow-1 {
   flex: 1;
+}
+
+footer .social-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icon:hover {
+  transform: scale(1.2);
+}
+
+footer .social-icon i {
+  color: #ffffff;
+}
+
+/* Footer Enhancements */
+footer ul {
+  padding-left: 0;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #f8d210;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  color: #f8d210;
 }
 
 /* Back-to-Top Button */
