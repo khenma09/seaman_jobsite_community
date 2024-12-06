@@ -253,42 +253,72 @@ h2 {
   margin: 0 auto;
 }
 
-/* Search Section */
+.shared-section .form-control, .newsletter .form-control, .search-section .form-control {
+  max-width: 400px;
+  height: 50px;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgb(114.1639344262, 170.6147540984, 253.8360655738);
+  font-size: 1rem;
+}
+.shared-section .form-control:focus, .newsletter .form-control:focus, .search-section .form-control:focus {
+  outline: none;
+  border-color: rgb(1.762295082, 87.2336065574, 213.237704918);
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+}
+.shared-section button, .newsletter button, .search-section button {
+  height: 50px;
+  padding: 0 1.5rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.shared-section button:hover, .newsletter button:hover, .search-section button:hover {
+  background-color: rgb(1.762295082, 87.2336065574, 213.237704918);
+}
+.shared-section .gap-3, .newsletter .gap-3, .search-section .gap-3 {
+  gap: 1rem !important;
+}
+.shared-section h2, .newsletter h2, .search-section h2 {
+  font-size: 2rem;
+  color: #0d6efd;
+}
+.shared-section p, .newsletter p, .search-section p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
 .search-section {
   background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
 }
-.search-section h2 {
-  color: #0056b3;
-  font-size: 2.2rem;
+
+.newsletter {
+  background-color: #ffffff;
 }
-.search-section p {
-  color: #6c757d;
-  font-size: 1.125rem;
+
+/* Responsive styling for Search and Newsletter sections */
+.search-section form,
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
-.search-section form .form-control {
-  border: 2px solid #0056b3;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  transition: border-color 0.3s ease;
+@media (min-width: 768px) {
+  .search-section form,
+  .newsletter form {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
-.search-section form .form-control:focus {
-  border-color: rgb(0, 110.5027932961, 230);
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.2);
+.search-section form input,
+.newsletter form input {
+  max-width: 400px;
+  flex: 1;
 }
-.search-section form .btn {
-  background-color: #0056b3;
-  color: #fff;
-  border: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.search-section form .btn:hover {
-  background-color: rgb(0, 61.4972067039, 128);
-  transform: translateY(-2px);
-}
-.search-section form .btn:active {
-  transform: translateY(0);
-  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+.search-section form button,
+.newsletter form button {
+  flex-shrink: 0;
 }
 
 /* Testimonials Section */
@@ -436,37 +466,6 @@ h2 {
 
 .recent-jobs .job-card .btn {
   align-self: start; /* Ensures button aligns at the start of the card */
-}
-
-/* Newsletter Section */
-.newsletter {
-  background-color: #f8f9fa;
-  padding: 3rem 2rem;
-  text-align: center;
-}
-.newsletter h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: #0056b3;
-}
-.newsletter p {
-  font-size: 1.1rem;
-  color: #6c757d;
-  margin-bottom: 2rem;
-}
-.newsletter input {
-  padding: 0.8rem;
-  border-radius: 25px;
-  border: 1px solid #999999;
-  margin-right: 0.5rem;
-}
-.newsletter button {
-  padding: 0.8rem 2rem;
-  border-radius: 25px;
-}
-.newsletter button:hover {
-  background-color: #003f8c;
 }
 
 /* Footer */

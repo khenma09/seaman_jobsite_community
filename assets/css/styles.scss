@@ -297,54 +297,83 @@ h2 {
 	}
 }
 
-/* Search Section */
-// Define variables if not already present
-$primary-color: #007bff !default;
-$text-muted: #6c757d !default;
+// Shared styles for both sections
+.shared-section {
+	.form-control {
+		max-width: 400px;
+		height: 50px;
+		padding: 0.5rem;
+		border-radius: 0.375rem;
+		border: 1px solid color.adjust(#0d6efd, $lightness: 20%);
+		font-size: 1rem;
 
-// Search Section Styles
-.search-section {
-	background-color: #f8f9fa;
+		&:focus {
+			outline: none;
+			border-color: color.adjust(#0d6efd, $lightness: -10%);
+			box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+		}
+	}
+
+	button {
+		height: 50px;
+		padding: 0 1.5rem;
+		border-radius: 0.375rem;
+		font-size: 1rem;
+		font-weight: 600;
+
+		&:hover {
+			background-color: color.adjust(#0d6efd, $lightness: -10%);
+		}
+	}
+
+	.gap-3 {
+		gap: 1rem !important;
+	}
 
 	h2 {
-		color: $primary-color;
-		font-size: 2.2rem;
+		font-size: 2rem;
+		color: #0d6efd;
 	}
 
 	p {
-		color: $text-muted;
-		font-size: 1.125rem;
+		font-size: 1rem;
+		color: #6c757d;
 	}
+}
 
+// Job Search Section
+.search-section {
+	@extend .shared-section;
+	background-color: #f8f9fa;
+	border-bottom: 1px solid #ddd;
+}
+
+// Newsletter Section
+.newsletter {
+	@extend .shared-section;
+	background-color: #ffffff;
+}
+
+/* Responsive styling for Search and Newsletter sections */
+.search-section,
+.newsletter {
 	form {
-		.form-control {
-			border: 2px solid $primary-color;
-			padding: 0.75rem;
-			border-radius: 0.5rem;
-			transition: border-color 0.3s ease;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem; // Increased the gap for better spacing
 
-			&:focus {
-				border-color: color.adjust($primary-color, $lightness: 10%);
-				outline: none;
-				box-shadow: 0 0 0 4px rgba($primary-color, 0.2);
-			}
+		@media (min-width: 768px) {
+			flex-direction: row;
+			gap: 1rem; // Adjusted gap for medium and larger screens
 		}
 
-		.btn {
-			background-color: $primary-color;
-			color: #fff;
-			border: none;
-			transition: background-color 0.3s ease, transform 0.2s ease;
+		input {
+			max-width: 400px;
+			flex: 1;
+		}
 
-			&:hover {
-				background-color: color.adjust($primary-color, $lightness: -10%);
-				transform: translateY(-2px);
-			}
-
-			&:active {
-				transform: translateY(0);
-				box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
-			}
+		button {
+			flex-shrink: 0;
 		}
 	}
 }
@@ -501,42 +530,6 @@ $text-muted: #6c757d !default;
 
 .recent-jobs .job-card .btn {
 	align-self: start; /* Ensures button aligns at the start of the card */
-}
-
-/* Newsletter Section */
-.newsletter {
-	background-color: $light-bg;
-	padding: 3rem 2rem;
-	text-align: center;
-
-	h2 {
-		font-size: 2rem;
-		margin-bottom: 1rem;
-		font-weight: 700;
-		color: $primary-color;
-	}
-
-	p {
-		font-size: 1.1rem;
-		color: $muted;
-		margin-bottom: 2rem;
-	}
-
-	input {
-		padding: 0.8rem;
-		border-radius: 25px;
-		border: 1px solid color.adjust($text-color, $lightness: 40%);
-		margin-right: 0.5rem;
-	}
-
-	button {
-		padding: 0.8rem 2rem;
-		border-radius: 25px;
-
-		&:hover {
-			background-color: $secondary-color;
-		}
-	}
 }
 
 /* Footer */
