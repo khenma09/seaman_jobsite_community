@@ -696,3 +696,39 @@ footer {
 		color: $primary-color;
 	}
 }
+
+/* About Page Styling */
+/* Hero Section */
+.hero-section {
+	background: linear-gradient(to bottom, #0056b3, #003f8c);
+	color: white;
+	padding: 3rem 0;
+}
+
+/* Hover Effects */
+.hover-card:hover {
+	transform: scale(1.05);
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Reveal Animations */
+.reveal-from-left {
+	animation: slideInLeft 0.8s ease-in-out;
+}
+
+@keyframes slideInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* Call-to-Action Section */
+.cta-section {
+	background: linear-gradient(to right, #0056b3, #003f8c);
+}
