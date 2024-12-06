@@ -28,7 +28,9 @@
 	</head>
 	<body>
 		<!-- Navbar -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm"
+		>
 			<div class="container">
 				<a class="navbar-brand" href="index.html">
 					<i class="bi bi-briefcase-fill"></i> Seafarer Jobsite
@@ -75,13 +77,16 @@
 		</nav>
 
 		<!-- Hero Section -->
-		<section class="hero d-flex align-items-center text-center">
+		<section class="hero d-flex align-items-center text-center bg-light py-5">
 			<div class="container">
 				<h1 class="display-4 fw-bold">Seafarer Jobsite Community</h1>
-				<p class="lead text-muted">
+				<p class="lead text-muted mb-4">
 					Connecting seafarers to global job opportunities.
 				</p>
-				<a href="register.html" class="btn btn-primary btn-lg px-5 py-3">
+				<a
+					href="register.html"
+					class="btn btn-primary btn-lg px-5 py-3 shadow-sm"
+				>
 					Get Started
 				</a>
 			</div>
@@ -99,44 +104,54 @@
 						type="text"
 						id="job-search"
 						name="jobSearch"
-						class="form-control form-control-lg me-2"
+						class="form-control form-control-lg me-2 shadow-sm"
 						placeholder="Enter job title or keyword"
 						style="max-width: 400px"
 						required
 					/>
-					<button class="btn btn-primary btn-lg px-4" type="submit">
+					<button class="btn btn-primary btn-lg px-4 shadow-sm" type="submit">
 						Search
 					</button>
 				</form>
 			</div>
 		</section>
 
+		<!-- Additional Refinements -->
+		<!-- Each section can include subtle animations, consistent shadow, and hover effects -->
 		<!-- Job Categories Section -->
 		<section class="job-categories py-5">
 			<div class="container text-center">
 				<h2 class="fw-bold mb-4">Popular Job Categories</h2>
 				<div class="row g-4">
 					<div class="col-md-3">
-						<div class="category-card p-4 rounded shadow-sm">
-							<i class="bi bi-compass display-4 text-primary"></i>
+						<div class="category-card p-4 shadow-sm rounded">
+							<div class="icon-circle bg-light mx-auto mb-3">
+								<i class="bi bi-compass display-4 text-primary"></i>
+							</div>
 							<h6 class="fw-bold mt-3">Deck Crew</h6>
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="category-card p-4 rounded shadow-sm">
-							<i class="bi bi-tools display-4 text-primary"></i>
+						<div class="category-card p-4 shadow-sm rounded">
+							<div class="icon-circle bg-light mx-auto mb-3">
+								<i class="bi bi-tools display-4 text-primary"></i>
+							</div>
 							<h6 class="fw-bold mt-3">Engine Crew</h6>
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="category-card p-4 rounded shadow-sm">
-							<i class="bi bi-people-fill display-4 text-primary"></i>
+						<div class="category-card p-4 shadow-sm rounded">
+							<div class="icon-circle bg-light mx-auto mb-3">
+								<i class="bi bi-people-fill display-4 text-primary"></i>
+							</div>
 							<h6 class="fw-bold mt-3">Catering Staff</h6>
 						</div>
 					</div>
 					<div class="col-md-3">
-						<div class="category-card p-4 rounded shadow-sm">
-							<i class="bi bi-building display-4 text-primary"></i>
+						<div class="category-card p-4 shadow-sm rounded">
+							<div class="icon-circle bg-light mx-auto mb-3">
+								<i class="bi bi-building display-4 text-primary"></i>
+							</div>
 							<h6 class="fw-bold mt-3">Administrative Roles</h6>
 						</div>
 					</div>
@@ -238,20 +253,25 @@
 		<!-- Call-to-Action Section -->
 		<section class="cta py-5 text-center text-white bg-primary">
 			<div class="container">
-				<h2 class="fw-bold">Ready to Start Your Maritime Career?</h2>
-				<p class="mb-4">
+				<h2 class="fw-bold display-5 mb-3">
+					Ready to Start Your Maritime Career?
+				</h2>
+				<p class="fs-5 mb-4">
 					Join thousands of seafarers who’ve found success through Seafarer
 					Jobsite.
 				</p>
 				<div
 					class="cta-buttons d-flex flex-column flex-md-row justify-content-center gap-3"
 				>
-					<a href="register.html" class="btn btn-light px-4 py-2 rounded-pill">
+					<a
+						href="register.html"
+						class="btn btn-light px-3 py-3 rounded-pill shadow"
+					>
 						Register Now
 					</a>
 					<a
 						href="job_listings.html"
-						class="btn btn-outline-light px-4 py-2 rounded-pill"
+						class="btn btn-outline-light px-3 py-3 rounded-pill shadow"
 					>
 						Browse Jobs
 					</a>
@@ -259,21 +279,28 @@
 			</div>
 		</section>
 
-		<section class="stats py-5 text-center text-white bg-primary">
-			<div class="container">
-				<h2 class="fw-bold mb-4">Our Achievements</h2>
-				<div class="row">
+		<!-- Achievements Section -->
+		<section class="stats py-5 bg-light">
+			<div class="container text-center">
+				<h2 class="fw-bold mb-5 text-primary">Our Achievements</h2>
+				<div class="row g-4">
 					<div class="col-md-4">
-						<h3 class="display-5 fw-bold">5,000+</h3>
-						<p>Jobs Posted</p>
+						<div class="achievement-card bg-white p-4 shadow-sm rounded">
+							<h3 class="display-5 fw-bold text-primary">5,000+</h3>
+							<p class="fs-5 text-muted">Jobs Posted</p>
+						</div>
 					</div>
 					<div class="col-md-4">
-						<h3 class="display-5 fw-bold">10,000+</h3>
-						<p>Active Applicants</p>
+						<div class="achievement-card bg-white p-4 shadow-sm rounded">
+							<h3 class="display-5 fw-bold text-primary">10,000+</h3>
+							<p class="fs-5 text-muted">Active Applicants</p>
+						</div>
 					</div>
 					<div class="col-md-4">
-						<h3 class="display-5 fw-bold">400+</h3>
-						<p>Trusted Companies</p>
+						<div class="achievement-card bg-white p-4 shadow-sm rounded">
+							<h3 class="display-5 fw-bold text-primary">400+</h3>
+							<p class="fs-5 text-muted">Trusted Companies</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -437,7 +464,7 @@
 		<!-- Scroll to top -->
 		<a
 			href="#"
-			class="back-to-top btn btn-primary btn-lg rounded-circle"
+			class="back-to-top btn btn-primary btn-lg rounded-circle shadow-sm"
 			aria-label="Back to top"
 		>
 			<i class="bi bi-arrow-up"></i>

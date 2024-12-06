@@ -230,35 +230,57 @@ input:focus {
 
 /* Job Categories */
 .job-categories {
-	h2 {
-		font-size: 2rem;
-		margin-bottom: 2rem;
-		color: $primary-color;
+	.category-card {
+		background: #ffffff; /* Ensure a clean, minimal background */
+		border: 1px solid color.adjust($text-color, $lightness: 40%);
+		box-shadow: 0px 4px 10px $shadow-color;
+		transition: transform 0.3s ease, box-shadow 0.3s ease,
+			background-color 0.3s ease;
+		cursor: pointer;
+		padding: 2rem 1rem; /* Add better spacing */
+		text-align: center;
+
+		&:hover {
+			transform: scale(1.08); /* A smooth scale effect */
+			background: color.adjust($primary-color, $lightness: 90%);
+			box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Add more depth */
+		}
+
+		.icon-circle {
+			width: 80px;
+			height: 80px;
+			background: $primary-color; /* Vibrant circle background */
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 1rem; /* Center-align with bottom margin */
+			color: $white; /* White icon for contrast */
+
+			i {
+				font-size: 2rem;
+			}
+		}
+
+		h6 {
+			font-size: 1.3rem; /* Slightly larger for better readability */
+			font-weight: 600;
+			color: $text-color;
+			margin-top: 0.5rem; /* Add space above the text */
+		}
+
+		p {
+			font-size: 0.9rem; /* Optional: Include a brief description */
+			color: $muted;
+			margin-top: 0.5rem;
+		}
 	}
 }
 
-.category-card {
-	background: $white;
-	border: 1px solid color.adjust($text-color, $lightness: 40%);
-	box-shadow: 0px 4px 8px $shadow-color;
-	transition: all 0.3s ease;
-
-	&:hover {
-		transform: scale(1.05);
-		background: color.adjust($primary-color, $lightness: 85%);
-		box-shadow: 0px 6px 12px $shadow-color;
-	}
-
-	i {
-		margin-bottom: 1rem;
-		color: $primary-color;
-	}
-
-	h6 {
-		font-size: 1.2rem;
-		font-weight: 600;
-		color: $text-color;
-	}
+h2 {
+	font-size: 2.5rem; /* More prominent heading */
+	color: $primary-color;
+	margin-bottom: 1.5rem; /* Add space below the heading */
 }
 
 /* Call-to-Action Section */
