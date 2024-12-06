@@ -529,15 +529,49 @@ h2 {
 }
 
 /* Footer */
-footer {
-	background-color: $text-color;
-	color: $white;
-	text-align: center;
-	padding: 1.5rem 1rem;
+$dark-color: #212529; // Dark background color
+$white: #ffffff; // White text color
+$text-muted-color: #adb5bd; // Muted text color
+$primary-color: #0d6efd; // Primary color for hover effects
 
-	p {
-		margin: 0;
-		font-size: 0.9rem;
+footer {
+	background-color: $dark-color;
+	color: $white;
+
+	h5 {
+		font-weight: bold;
+	}
+
+	.text-muted {
+		color: $text-muted-color !important;
+	}
+
+	a {
+		color: $white;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.social-icon {
+		i {
+			transition: transform 0.3s ease, color 0.3s ease;
+
+			&:hover {
+				transform: scale(1.2);
+				color: $primary-color;
+			}
+		}
+	}
+
+	.border-bottom {
+		border-color: rgba(255, 255, 255, 0.1) !important;
+	}
+
+	.mt-4 p {
+		color: rgba(255, 255, 255, 0.75);
 	}
 }
 

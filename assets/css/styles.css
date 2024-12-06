@@ -468,14 +468,34 @@ h2 {
 
 /* Footer */
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 1rem;
+  background-color: #212529;
+  color: #ffffff;
 }
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
+footer h5 {
+  font-weight: bold;
+}
+footer .text-muted {
+  color: #adb5bd !important;
+}
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .social-icon i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+footer .social-icon i:hover {
+  transform: scale(1.2);
+  color: #0d6efd;
+}
+footer .border-bottom {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+footer .mt-4 p {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* Sticky Footer */
@@ -529,14 +549,14 @@ footer a:hover {
   justify-content: center;
   border: none;
   border-radius: 50%;
-  background-color: #0056b3;
-  color: #fff;
+  background-color: #0d6efd;
+  color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: all 0.3s ease;
 }
 .back-to-top:hover {
-  background-color: rgb(0, 61.4972067039, 128);
+  background-color: rgb(1.762295082, 87.2336065574, 213.237704918);
   transform: scale(1.1);
 }
 .back-to-top i {
@@ -546,11 +566,11 @@ footer a:hover {
 /* Registration Section */
 .register-section {
   padding: 3rem 2rem;
-  background: linear-gradient(to right, #f8f9fa, hsl(211.1731843575, 100%, 125.0980392157%));
+  background: linear-gradient(to right, #f8f9fa, hsl(215.75, 98.3606557377%, 142.1568627451%));
 }
 .register-section h2 {
   font-size: 2.5rem;
-  color: #0056b3;
+  color: #0d6efd;
 }
 .register-section p {
   font-size: 1.1rem;
@@ -558,7 +578,7 @@ footer a:hover {
   margin-bottom: 2rem;
 }
 .register-section .register-card {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #999999;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -580,8 +600,8 @@ footer a:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .register-section .register-card .form-control:focus {
-  border-color: #0056b3;
-  box-shadow: 0px 0px 8px rgb(0, 36.9944134078, 77);
+  border-color: #0d6efd;
+  box-shadow: 0px 0px 8px rgb(1.3442622951, 66.5409836066, 162.6557377049);
 }
 .register-section .register-card .btn-primary {
   border-radius: 25px;
@@ -599,11 +619,11 @@ footer a:hover {
   transition: all 0.3s ease;
 }
 .nav-tabs .nav-link.active {
-  color: #0056b3;
-  border-bottom: 2px solid #0056b3;
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
 }
 .nav-tabs .nav-link:hover {
-  color: #0056b3;
+  color: #0d6efd;
 }
 
 /* Forgot Password Section */
@@ -611,14 +631,14 @@ footer a:hover {
   padding: 3rem 2rem;
 }
 .forgot-password-section .forgot-password-card {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #999999;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 .forgot-password-section .forgot-password-card h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #0056b3;
+  color: #0d6efd;
 }
 .forgot-password-section .forgot-password-card p {
   font-size: 1rem;
@@ -631,8 +651,8 @@ footer a:hover {
   padding: 0.75rem;
 }
 .forgot-password-section .forgot-password-card input:focus {
-  border-color: #0056b3;
-  box-shadow: 0px 0px 8px rgb(0, 36.9944134078, 77);
+  border-color: #0d6efd;
+  box-shadow: 0px 0px 8px rgb(1.3442622951, 66.5409836066, 162.6557377049);
 }
 .forgot-password-section .forgot-password-card button {
   font-size: 1rem;
@@ -646,7 +666,7 @@ footer a:hover {
 }
 .forgot-password-section .forgot-password-card a {
   font-size: 0.9rem;
-  color: #0056b3;
+  color: #0d6efd;
 }
 .forgot-password-section .forgot-password-card a:hover {
   text-decoration: underline;
@@ -668,7 +688,7 @@ footer a:hover {
   color: #6c757d;
 }
 .toggle-password:hover {
-  color: #0056b3;
+  color: #0d6efd;
 }
 
 /* About Page Styling */
