@@ -97,9 +97,12 @@
 				<form class="d-flex justify-content-center">
 					<input
 						type="text"
+						id="job-search"
+						name="jobSearch"
 						class="form-control form-control-lg me-2"
 						placeholder="Enter job title or keyword"
 						style="max-width: 400px"
+						required
 					/>
 					<button class="btn btn-primary btn-lg px-4" type="submit">
 						Search
@@ -356,11 +359,16 @@
 				<form class="d-flex justify-content-center">
 					<input
 						type="email"
+						id="newsletter-email"
+						name="newsletterEmail"
 						class="form-control form-control-lg me-2"
 						placeholder="Enter your email"
 						style="max-width: 400px"
+						required
 					/>
-					<button class="btn btn-primary btn-lg px-4">Subscribe</button>
+					<button class="btn btn-primary btn-lg px-4" type="submit">
+						Subscribe
+					</button>
 				</form>
 			</div>
 		</section>
