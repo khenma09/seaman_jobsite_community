@@ -835,3 +835,43 @@ footer a:hover {
 .cta-section {
 	background: linear-gradient(to right, #0056b3, #003f8c);
 }
+
+/* Contact Page Section */
+.contact-section {
+	.form-control {
+		border-radius: 10px;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+		&:focus {
+			border-color: $primary-color;
+			box-shadow: 0 0 6px rgba($primary-color, 0.5);
+		}
+	}
+
+	button {
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+		&:hover {
+			background-color: $secondary-color;
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+
+		li {
+			font-size: 1rem;
+			color: $text-color;
+
+			i {
+				font-size: 1.2rem;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.hero-section {
+	background: linear-gradient(to bottom, #0056b3, #003f8c);
+}
