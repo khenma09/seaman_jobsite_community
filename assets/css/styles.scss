@@ -17,6 +17,17 @@ body {
 	color: $text-color;
 	line-height: 1.6;
 }
+/* Ensure the body takes full height */
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Add space between content and footer */
+.content {
+	flex: 1; // Allow content to grow and push footer down
+}
 
 a {
 	text-decoration: none;
@@ -587,6 +598,11 @@ footer {
 	.mt-4 p {
 		color: rgba(255, 255, 255, 0.75);
 	}
+}
+/* Add padding or margin to the footer */
+footer {
+	padding: 2rem 0; // Adjust padding for consistent spacing
+	margin-top: 2rem; // Add spacing between the footer and previous content
 }
 
 /* Sticky Footer */
