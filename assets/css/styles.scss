@@ -981,3 +981,46 @@ footer a:hover {
 		margin-top: 1.5rem !important;
 	}
 }
+
+/* Buttons in Profile Section */
+.profile-page .btn {
+	font-size: 0.875rem; // Smaller font size for proportion
+	font-weight: 500; // Slightly lighter weight
+	border-radius: 20px; // Slightly less rounded
+	padding: 0.4rem 1rem; // Reduced padding for a compact look
+	transition: all 0.3s ease;
+
+	&.btn-primary {
+		background-color: $primary-color;
+		color: $white;
+		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+
+		&:hover {
+			background-color: $secondary-color;
+			transform: scale(1.03);
+		}
+	}
+
+	&.btn-outline-primary {
+		border: 1px solid $primary-color;
+		color: $primary-color;
+		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+
+		&:hover {
+			background-color: $primary-color;
+			color: $white;
+			transform: scale(1.03);
+		}
+	}
+
+	i {
+		font-size: 1rem; // Adjust icon size to match smaller button
+		vertical-align: middle;
+	}
+}
+
+/* Align Buttons Centered Below Profile Section */
+.d-flex.justify-content-center.gap-2 {
+	margin-top: 1rem;
+	gap: 1rem; // Reduced gap for better alignment
+}
