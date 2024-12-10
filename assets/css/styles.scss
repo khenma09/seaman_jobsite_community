@@ -915,13 +915,45 @@ footer a:hover {
 	background: linear-gradient(to bottom, #0056b3, #003f8c);
 }
 
+/* Social Profiles Styling */
+.profile-page .card {
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+.profile-page .list-group-item {
+	font-size: 1rem;
+	color: $text-color;
+
+	a {
+		font-weight: 500;
+		color: $primary-color;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	i {
+		font-size: 1.2rem;
+	}
+}
+
+/* Responsive spacing for the second row */
+@media (min-width: 992px) {
+	.profile-page .row + .row {
+		margin-top: 30px; // Space between first and second rows
+	}
+}
+
 /* Profile Page Styling */
 .profile-page {
 	.card {
 		background-color: #fff;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		border-radius: 8px;
-		width: 100%; // Ensures full width of column
+		width: 100%; // Full width for all cards
 	}
 
 	.avatar-upload img {
@@ -933,26 +965,19 @@ footer a:hover {
 		color: $text-color;
 
 		strong {
-			color: $primary-color;
+			font-weight: bold;
 		}
 	}
 
-	.edit-profile-btn,
-	.view-resume-btn {
-		width: 150px;
+	/* Responsive adjustments */
+	@media (min-width: 992px) {
+		.profile-page .row {
+			column-gap: 30px; // Adjust spacing between columns
+		}
 	}
 
-	.gap-3 {
-		gap: 1.5rem !important;
-	}
-}
-
-/* Ensure the columns are aligned properly in one row */
-@media (min-width: 992px) {
-	.profile-page .row {
-		display: flex; // Ensures row is flex-based
-		flex-wrap: nowrap; // Prevents wrapping into multiple rows
-		align-items: flex-start; // Ensures alignment at the top
-		column-gap: 30px; // Spacing between left and right columns
+	/* Adjust spacing between rows */
+	.mt-4 {
+		margin-top: 1.5rem !important;
 	}
 }
