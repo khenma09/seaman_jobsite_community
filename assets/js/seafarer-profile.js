@@ -145,3 +145,33 @@ document.addEventListener("DOMContentLoaded", () => {
 		viewResumeButton.addEventListener("click", viewResume);
 	}
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+	const stats = {
+		appliedJobs: 50,
+		jobReviews: 20,
+		profileViews: 120,
+		shortlisted: 15,
+	};
+
+	const animateCounter = (id, target) => {
+		const element = document.getElementById(id);
+		let count = 0;
+		const duration = 1000; // Total duration in ms
+		const increment = target / (duration / 20); // Increment per interval
+
+		const interval = setInterval(() => {
+			count += increment;
+			if (count >= target) {
+				count = target;
+				clearInterval(interval);
+			}
+			element.textContent = Math.ceil(count);
+		}, 20); // Update every 20ms
+	};
+
+	animateCounter("appliedJobs", stats.appliedJobs);
+	animateCounter("jobReviews", stats.jobReviews);
+	animateCounter("profileViews", stats.profileViews);
+	animateCounter("shortlisted", stats.shortlisted);
+});

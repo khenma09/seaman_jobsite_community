@@ -897,4 +897,63 @@ footer a:hover {
   gap: 1rem;
 }
 
+/* Application Statistics Section */
+.profile-page .row .card {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.profile-page .row .card h5 {
+  font-size: 1.5rem;
+}
+.profile-page .row .card p {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.profile-page .row.gx-3 {
+  margin-bottom: 1.5rem;
+}
+
+/* Align statistics for responsiveness */
+@media (max-width: 576px) {
+  .profile-page .row.gx-3 .col-sm-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 1rem;
+  }
+}
+/* Statistics Section */
+.stats-card {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.stats-card i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.stats-card h5 {
+  font-size: 1.5rem;
+}
+.stats-card p {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .stats-card {
+    margin-bottom: 1rem;
+  }
+  .stats-card i {
+    font-size: 2rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
