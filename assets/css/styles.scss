@@ -311,6 +311,7 @@ h2 {
 		}
 	}
 }
+
 .cta h2 {
 	color: #f8f9fa; /* Light text color for readability */
 	// text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for contrast */
@@ -912,4 +913,46 @@ footer a:hover {
 
 .hero-section {
 	background: linear-gradient(to bottom, #0056b3, #003f8c);
+}
+
+/* Profile Page Styling */
+.profile-page {
+	.card {
+		background-color: #fff;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		border-radius: 8px;
+		width: 100%; // Ensures full width of column
+	}
+
+	.avatar-upload img {
+		border: 3px solid $primary-color;
+	}
+
+	.list-group-item {
+		font-size: 1rem;
+		color: $text-color;
+
+		strong {
+			color: $primary-color;
+		}
+	}
+
+	.edit-profile-btn,
+	.view-resume-btn {
+		width: 150px;
+	}
+
+	.gap-3 {
+		gap: 1.5rem !important;
+	}
+}
+
+/* Ensure the columns are aligned properly in one row */
+@media (min-width: 992px) {
+	.profile-page .row {
+		display: flex; // Ensures row is flex-based
+		flex-wrap: nowrap; // Prevents wrapping into multiple rows
+		align-items: flex-start; // Ensures alignment at the top
+		column-gap: 30px; // Spacing between left and right columns
+	}
 }

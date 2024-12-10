@@ -1,12 +1,18 @@
 const jobsData = [
 	{
-		title: "Deck Officer",
+		title: "2nd Officer",
 		location: "Manila, Philippines",
 		company: "ABC Maritime Corporation",
-		salary: "$2000 - $3000",
+		salary: "$3500 - $4000",
 	},
 	{
-		title: "Marine Engineer",
+		title: "Chief Officer",
+		location: "Manila, Philippines",
+		company: "ABC Maritime Corporation",
+		salary: "$5500 - $7000",
+	},
+	{
+		title: "2nd Engineer",
 		location: "Cebu, Philippines",
 		company: "XYZ Shipping Lines",
 		salary: "$2500 - $3500",
@@ -24,7 +30,7 @@ const jobsData = [
 		salary: "$1800 - $2500",
 	},
 	{
-		title: "Ship Captain",
+		title: "Master",
 		location: "Batangas, Philippines",
 		company: "Global Maritime Agency",
 		salary: "$4000 - $6000",
@@ -58,6 +64,18 @@ const jobsData = [
 		location: "Davao, Philippines",
 		company: "Elite Maritime Management Corporation",
 		salary: "$2000 - $3000",
+	},
+	{
+		title: "3rd Officer",
+		location: "Davao, Philippines",
+		company: "Elite Maritime Management Corporation",
+		salary: "$2000 - $3000",
+	},
+	{
+		title: "Deck Cadet",
+		location: "Davao, Philippines",
+		company: "Elite Maritime Management Corporation",
+		salary: "$400 - $500",
 	},
 ];
 
