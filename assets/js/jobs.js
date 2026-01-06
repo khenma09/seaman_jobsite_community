@@ -114,17 +114,18 @@ function displayJobs() {
 
 function updatePagination() {
 	const pagination = document.getElementById("pagination");
-	pagination.innerHTML = "";
 
 	const totalPages = Math.ceil(jobsData.length / entriesPerPage);
+	let paginationHTML = "";
 
 	for (let i = 1; i <= totalPages; i++) {
-		const pageItem = `
+		paginationHTML += `
           <li class="page-item ${i === currentPage ? "active" : ""}">
               <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
           </li>`;
-		pagination.insertAdjacentHTML("beforeend", pageItem);
 	}
+
+	pagination.innerHTML = paginationHTML;
 }
 
 function changePage(page) {
