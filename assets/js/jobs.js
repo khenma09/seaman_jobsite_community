@@ -88,10 +88,11 @@ function displayJobs() {
 	const jobsToDisplay = jobsData.slice(startIndex, endIndex);
 
 	const container = document.getElementById("jobsList");
-	container.innerHTML = "";
 
-	jobsToDisplay.forEach((job) => {
-		const jobCard = `
+	// Optimize: Batch DOM updates by creating a single HTML string
+	const jobsHTML = jobsToDisplay
+		.map(
+			(job) => `
           <div class="col-md-6">
               <div class="card shadow-sm">
                   <div class="card-body">
@@ -102,9 +103,11 @@ function displayJobs() {
                       <a href="#" class="btn btn-primary btn-sm">Apply Now</a>
                   </div>
               </div>
-          </div>`;
-		container.insertAdjacentHTML("beforeend", jobCard);
-	});
+          </div>`
+		)
+		.join("");
+
+	container.innerHTML = jobsHTML;
 
 	updatePagination();
 }
