@@ -5,6 +5,58 @@ function viewResume() {
 	alert("Resume functionality is not implemented yet!");
 }
 
+// Mock Data for Application Tracker
+const applications = [
+	{
+		title: "2nd Officer",
+		company: "ABC Maritime Corporation",
+		date: "2023-10-15",
+		status: "Viewed",
+	},
+	{
+		title: "Chief Officer",
+		company: "Global Maritime Agency",
+		date: "2023-10-10",
+		status: "Pending",
+	},
+	{
+		title: "Master",
+		company: "Elite Shipping Partners",
+		date: "2023-09-28",
+		status: "Shortlisted",
+	},
+    {
+		title: "3rd Officer",
+		company: "XYZ Shipping Lines",
+		date: "2023-09-20",
+		status: "Rejected",
+	},
+];
+
+function renderApplicationTracker() {
+    const tbody = document.getElementById("applicationTrackerBody");
+    if (!tbody) return;
+
+    // Batch HTML creation
+    const rowsHTML = applications.map(app => {
+        let statusClass = "text-secondary";
+        if (app.status === "Viewed") statusClass = "text-primary";
+        if (app.status === "Pending") statusClass = "text-warning";
+        if (app.status === "Shortlisted") statusClass = "text-success fw-bold";
+        if (app.status === "Rejected") statusClass = "text-danger";
+
+        return `
+        <tr>
+            <td><span class="fw-semibold">${app.title}</span></td>
+            <td>${app.company}</td>
+            <td>${app.date}</td>
+            <td><span class="${statusClass}">${app.status}</span></td>
+        </tr>`;
+    }).join("");
+
+    tbody.innerHTML = rowsHTML;
+}
+
 // Ensure modal and profile update functions work as before
 document.addEventListener("DOMContentLoaded", () => {
 	// Add event listeners for existing functionality
@@ -17,6 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (viewResumeButton) {
 		viewResumeButton.addEventListener("click", viewResume);
 	}
+
+    // Render Application Tracker
+    renderApplicationTracker();
 });
 
 // Function to preview the uploaded avatar in the modal and update the main profile
@@ -42,16 +97,22 @@ function updateProfileSection(data) {
 	const { fullName, email, phone, currentRank, lastSignedOffDate } = data;
 
 	// Select the profile card
-	const profileCard = document.querySelector(".profile-section .card");
+    // Note: In the HTML structure, the profile card is the first card in the first column.
+    // A more robust selector might be needed if structure changes, but finding by known child ID is safer.
+    const avatarImg = document.getElementById("avatarPreview");
+	const profileCard = avatarImg ? avatarImg.closest(".card") : document.querySelector(".col-lg-3 .card");
+
 	if (!profileCard) {
 		console.error("Profile card not found!");
 		return;
 	}
 
 	// Clear existing profile details (but keep the avatar)
-	const avatarElement = profileCard.querySelector("#avatarPreview");
+	const avatarElement = profileCard.querySelector(".avatar-upload");
+    const buttonsDiv = profileCard.querySelector(".d-flex.gap-2"); // Select the buttons container
+
 	profileCard.innerHTML = ""; // Clear the card
-	if (avatarElement) profileCard.appendChild(avatarElement.parentElement); // Re-add avatar
+	if (avatarElement) profileCard.appendChild(avatarElement); // Re-add avatar container
 
 	// Add full name
 	const profileName = document.createElement("h3");
@@ -84,6 +145,9 @@ function updateProfileSection(data) {
 		lastSignedOffDate || "Not specified"
 	}`;
 	profileCard.appendChild(signedOffInfo);
+
+    // Re-add buttons
+    if (buttonsDiv) profileCard.appendChild(buttonsDiv);
 }
 
 // Function to handle the Save Changes button click
@@ -156,6 +220,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const animateCounter = (id, target) => {
 		const element = document.getElementById(id);
+        if (!element) return;
+
 		let count = 0;
 		const duration = 1000; // Total duration in ms
 		const increment = target / (duration / 20); // Increment per interval

@@ -93,13 +93,31 @@
 			<!-- Jobs Listing Section -->
 			<section class="jobs-section py-5">
 				<div class="container">
+					<!-- Filters Section -->
+					<div class="row mb-4 g-3">
+						<div class="col-md-4">
+							<label for="filterRank" class="form-label fw-bold">Filter by Rank</label>
+							<select id="filterRank" class="form-select">
+								<option value="">All Ranks</option>
+								<!-- Populated dynamically -->
+							</select>
+						</div>
+						<div class="col-md-4">
+							<label for="filterCompany" class="form-label fw-bold">Filter by Company</label>
+							<select id="filterCompany" class="form-select">
+								<option value="">All Companies</option>
+								<!-- Populated dynamically -->
+							</select>
+						</div>
+					</div>
+
 					<div class="d-flex justify-content-between align-items-center mb-4">
 						<h2 class="fw-bold text-primary">Available Jobs</h2>
 						<div>
 							<label for="entriesPerPage" class="form-label me-2">Show</label>
 							<select
 								id="entriesPerPage"
-								class="form-select form-select-sm w-auto"
+								class="form-select form-select-sm w-auto d-inline-block"
 							>
 								<option value="5" selected>5</option>
 								<option value="10">10</option>
