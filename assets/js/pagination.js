@@ -22,34 +22,38 @@ function displayTrainingCenters() {
 	const container = document.getElementById("trainingCenters");
 	container.innerHTML = "";
 
-	centersToDisplay.forEach((center) => {
-		const centerCard = `
+	// Optimize: Batch DOM updates to prevent layout thrashing
+	const centersHTML = centersToDisplay
+		.map(
+			(center) => `
       <div class="col-md-4">
         <div class="p-4 shadow rounded bg-white h-100 hover-card">
           <h5 class="fw-bold">${center.name}</h5>
           <p class="text-muted">Location: ${center.location}</p>
           <a href="training_details.html" class="btn btn-outline-primary btn-sm">Learn More</a>
         </div>
-      </div>`;
-		container.insertAdjacentHTML("beforeend", centerCard);
-	});
+      </div>`
+		)
+		.join("");
+
+	container.innerHTML = centersHTML;
 
 	updatePagination();
 }
 
 function updatePagination() {
 	const pagination = document.getElementById("pagination");
-	pagination.innerHTML = "";
-
 	const totalPages = Math.ceil(trainingCentersData.length / entriesPerPage);
 
+	// Optimize: Batch DOM updates for pagination
+	let paginationHtml = "";
 	for (let i = 1; i <= totalPages; i++) {
-		const pageItem = `
+		paginationHtml += `
       <li class="page-item ${i === currentPage ? "active" : ""}">
         <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
       </li>`;
-		pagination.insertAdjacentHTML("beforeend", pageItem);
 	}
+	pagination.innerHTML = paginationHtml;
 }
 
 function changePage(page) {
