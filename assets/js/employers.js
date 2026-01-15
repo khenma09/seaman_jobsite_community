@@ -262,10 +262,10 @@ function displayEmployers() {
 	const employersToDisplay = employersData.slice(startIndex, endIndex);
 
 	const container = document.getElementById("employersList");
-	container.innerHTML = "";
 
-	employersToDisplay.forEach((employer) => {
-		const employerCard = `
+	// Optimize: Batch DOM updates by creating a single HTML string
+	// Using map and join avoids multiple reflows caused by insertAdjacentHTML in a loop
+	const employersHTML = employersToDisplay.map((employer) => `
           <div class="col-md-4">
               <div class="card shadow-sm">
                   <div class="card-body">
@@ -275,26 +275,28 @@ function displayEmployers() {
                       <a href="#" class="btn btn-primary btn-sm">View Details</a>
                   </div>
               </div>
-          </div>`;
-		container.insertAdjacentHTML("beforeend", employerCard);
-	});
+          </div>`
+	).join('');
+
+	container.innerHTML = employersHTML;
 
 	updatePagination();
 }
 
 function updatePagination() {
 	const pagination = document.getElementById("pagination");
-	pagination.innerHTML = "";
 
 	const totalPages = Math.ceil(employersData.length / entriesPerPage);
 
+	const pages = [];
 	for (let i = 1; i <= totalPages; i++) {
-		const pageItem = `
+		pages.push(`
           <li class="page-item ${i === currentPage ? "active" : ""}">
               <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
-          </li>`;
-		pagination.insertAdjacentHTML("beforeend", pageItem);
+          </li>`);
 	}
+
+	pagination.innerHTML = pages.join('');
 }
 
 function changePage(page) {
