@@ -156,18 +156,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const animateCounter = (id, target) => {
 		const element = document.getElementById(id);
-		let count = 0;
 		const duration = 1000; // Total duration in ms
-		const increment = target / (duration / 20); // Increment per interval
+		const startTime = performance.now();
 
-		const interval = setInterval(() => {
-			count += increment;
-			if (count >= target) {
-				count = target;
-				clearInterval(interval);
+		// Optimization: Use requestAnimationFrame instead of setInterval
+		// Benefits: Smoother animation (60fps), better battery life (pauses in background),
+		// and exact timing synchronization with the browser's refresh rate.
+		const step = (currentTime) => {
+			const elapsed = currentTime - startTime;
+			const progress = Math.min(elapsed / duration, 1);
+
+			// Linear interpolation
+			const currentCount = Math.ceil(progress * target);
+			element.textContent = currentCount;
+
+			if (progress < 1) {
+				requestAnimationFrame(step);
 			}
-			element.textContent = Math.ceil(count);
-		}, 20); // Update every 20ms
+		};
+
+		requestAnimationFrame(step);
 	};
 
 	animateCounter("appliedJobs", stats.appliedJobs);
