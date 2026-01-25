@@ -20,36 +20,38 @@ function displayTrainingCenters() {
 	const centersToDisplay = trainingCentersData.slice(startIndex, endIndex);
 
 	const container = document.getElementById("trainingCenters");
-	container.innerHTML = "";
 
-	centersToDisplay.forEach((center) => {
-		const centerCard = `
+	// Batch DOM updates for better performance
+	const centerCardsHTML = centersToDisplay.map((center) => `
       <div class="col-md-4">
         <div class="p-4 shadow rounded bg-white h-100 hover-card">
           <h5 class="fw-bold">${center.name}</h5>
           <p class="text-muted">Location: ${center.location}</p>
           <a href="training_details.html" class="btn btn-outline-primary btn-sm">Learn More</a>
         </div>
-      </div>`;
-		container.insertAdjacentHTML("beforeend", centerCard);
-	});
+      </div>`).join('');
+
+	container.innerHTML = centerCardsHTML;
 
 	updatePagination();
 }
 
 function updatePagination() {
 	const pagination = document.getElementById("pagination");
-	pagination.innerHTML = "";
 
 	const totalPages = Math.ceil(trainingCentersData.length / entriesPerPage);
+	let paginationHTML = "";
 
+	// Build pagination HTML string first
 	for (let i = 1; i <= totalPages; i++) {
-		const pageItem = `
+		paginationHTML += `
       <li class="page-item ${i === currentPage ? "active" : ""}">
         <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
       </li>`;
-		pagination.insertAdjacentHTML("beforeend", pageItem);
 	}
+
+	// Single DOM update
+	pagination.innerHTML = paginationHTML;
 }
 
 function changePage(page) {
